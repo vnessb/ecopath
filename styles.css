@@ -121,3 +121,17 @@ input[type="radio"] {
     background-color: #fff4c8;
     border-radius: 5px;
 }
+/* Tab content visibility */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Active tab styling */
+.active-tab {
+    background-color: #77af9c;
+    color: white;
+}
