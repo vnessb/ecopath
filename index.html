@@ -25,37 +25,101 @@
         <p>This website helps you calculate your carbon footprint and provides resources for reducing it.</p>
     </div>
 
-    <div id="calculator" class="tab-content">
-        <h2>Calculate Your Ecological Footprint</h2>
-        <form id="ecoForm">
-            <!-- Input fields for calculating the footprint -->
-            <label for="appliances">How many appliances do you use regularly?</label>
-            <input type="number" id="appliances" name="appliances" min="0" required>
+    <div class="container">
+        <h1>Ecological Footprint Calculator</h1>
+        <form id="footprintForm">
+            <!-- Energy Use -->
+            <div class="question active">
+                <label>How many appliances are plugged in at all times in your home?</label>
+                <select id="appliances">
+                    <option value="">Select...</option>
+                    <option value="500">0-5</option>
+                    <option value="1000">6-15</option>
+                    <option value="1500">16-25</option>
+                    <option value="2000">26+</option>
+                </select>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <label for="renewable">Do you use renewable energy?</label>
-            <input type="radio" id="renewableYes" name="renewable" value="yes"> Yes
-            <input type="radio" id="renewableNo" name="renewable" value="no"> No
+            <!-- Renewable Energy -->
+            <div class="question">
+                <label>Do you use renewable energy sources?</label>
+                <input type="radio" id="renewableYes" name="renewable" value="yes"> Yes
+                <input type="radio" id="renewableNo" name="renewable" value="no"> No
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <label for="transport">How many miles do you drive per year?</label>
-            <input type="number" id="transport" name="transport" min="0" required>
+            <!-- Transportation -->
+            <div class="question">
+                <label>Choose your primary transportation type:</label>
+                <select id="transport">
+                    <option value="">Select...</option>
+                    <option value="4000">Gas Car</option>
+                    <option value="2000">Hybrid Car</option>
+                    <option value="1000">Electric Car</option>
+                    <option value="500">Public Transport</option>
+                </select>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <label for="diet">What is your diet like? (in kg of food per year)</label>
-            <input type="number" id="diet" name="diet" min="0" required>
+            <!-- Diet -->
+            <div class="question">
+                <label>Choose your primary diet type:</label>
+                <select id="diet">
+                    <option value="">Select...</option>
+                    <option value="3000">Meat-heavy</option>
+                    <option value="2500">Average</option>
+                    <option value="1500">Vegetarian</option>
+                    <option value="1000">Vegan</option>
+                </select>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <label for="shopping">How much do you shop per month (in kg of goods)?</label>
-            <input type="number" id="shopping" name="shopping" min="0" required>
+            <!-- Consumption -->
+            <div class="question">
+                <label>Choose your clothing shopping habits:</label>
+                <select id="shopping">
+                    <option value="">Select...</option>
+                    <option value="100">Local shops</option>
+                    <option value="200">Thrift stores</option>
+                    <option value="400">Major stores</option>
+                    <option value="600">Online shopping</option>
+                </select>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <label for="shoppingFrequency">How often do you shop?</label>
-            <input type="number" id="shoppingFrequency" name="shoppingFrequency" min="0" required>
+            <div class="question">
+                <label>How often do you shop for clothes?</label>
+                <select id="shoppingFrequency">
+                    <option value="">Select...</option>
+                    <option value="1">More than three times a month</option>
+                    <option value="1.5">Two to three times a month</option>
+                    <option value="2">Once a month</option>
+                </select>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <label for="shower">How long do you shower on average (in minutes)?</label>
-            <input type="number" id="shower" name="shower" min="0" required>
+            <!-- Water Usage -->
+            <div class="question">
+                <label>How often do you shower per week?</label>
+                <select id="shower">
+                    <option value="">Select...</option>
+                    <option value="800">Daily or more</option>
+                    <option value="600">4-6 times a week</option>
+                    <option value="400">1-3 times a week</option>
+                </select>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <label for="waterTemp">Do you prefer hot water in the shower?</label>
-            <input type="radio" id="waterTempYes" name="waterTemp" value="yes"> Yes
-            <input type="radio" id="waterTempNo" name="waterTemp" value="no"> No
+            <!-- Water Temp -->
+            <div class="question">
+                <label>Do you mostly use warm water?</label>
+                <input type="radio" id="warmYes" name="waterTemp" value="yes"> Yes
+                <input type="radio" id="warmNo" name="waterTemp" value="no"> No
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
 
-            <button type="button" onclick="calculateFootprint()">Calculate Footprint</button>
+            <div id="result"></div>
         </form>
 
         <div id="result" style="display:none;"></div>
