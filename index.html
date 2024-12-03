@@ -17,7 +17,6 @@
         <a href="#calculator" onclick="openTab(event, 'calculator')">Calculator</a>
         <a href="#resources" onclick="openTab(event, 'resources')">Resources</a>
         <a href="#info" onclick="openTab(event, 'info')">Info</a>
-
     </div>
 
     <!-- Tab Content -->
@@ -26,8 +25,9 @@
         <p>This website helps you calculate your carbon footprint and provides resources for reducing it.</p>
     </div>
 
-    <div class="container">
-        <h1>Ecological Footprint Calculator</h1>
+    <!-- Move the calculator to the calculator tab -->
+    <div id="calculator" class="tab-content">
+        <h2>Ecological Footprint Calculator</h2>
         <form id="footprintForm">
             <!-- Energy Use -->
             <div class="question active">
@@ -115,8 +115,6 @@
 
             <div id="result"></div>
         </form>
-
-        <div id="result" style="display:none;"></div>
     </div>
 
     <div id="resources" class="tab-content">
