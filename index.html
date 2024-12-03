@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecological Footprint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Title of the page -->
+    <h1>Ecological Footprint Calculator</h1>
+
+    <!-- Tab Navigation Menu -->
+    <div class="nav-tabs">
+        <a href="#home" class="active-tab" onclick="openTab(event, 'home')">Home</a>
+        <a href="#calculator" onclick="openTab(event, 'calculator')">Calculator</a>
+        <a href="#resources" onclick="openTab(event, 'resources')">Resources</a>
+        <a href="#info" onclick="openTab(event, 'info')">Info</a>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="home" class="tab-content active">
+        <h2>Welcome to the Ecological Footprint Calculator</h2>
+        <p>This website helps you calculate your carbon footprint and provides resources for reducing it.</p>
+    </div>
+
+    <div id="calculator" class="tab-content">
+        <h2>Calculate Your Ecological Footprint</h2>
+        <form id="ecoForm">
+            <!-- Input fields for calculating the footprint -->
+            <label for="appliances">How many appliances do you use regularly?</label>
+            <input type="number" id="appliances" name="appliances" min="0" required>
+
+            <label for="renewable">Do you use renewable energy?</label>
+            <input type="radio" id="renewableYes" name="renewable" value="yes"> Yes
+            <input type="radio" id="renewableNo" name="renewable" value="no"> No
+
+            <label for="transport">How many miles do you drive per year?</label>
+            <input type="number" id="transport" name="transport" min="0" required>
+
+            <label for="diet">What is your diet like? (in kg of food per year)</label>
+            <input type="number" id="diet" name="diet" min="0" required>
+
+            <label for="shopping">How much do you shop per month (in kg of goods)?</label>
+            <input type="number" id="shopping" name="shopping" min="0" required>
+
+            <label for="shoppingFrequency">How often do you shop?</label>
+            <input type="number" id="shoppingFrequency" name="shoppingFrequency" min="0" required>
+
+            <label for="shower">How long do you shower on average (in minutes)?</label>
+            <input type="number" id="shower" name="shower" min="0" required>
+
+            <label for="waterTemp">Do you prefer hot water in the shower?</label>
+            <input type="radio" id="waterTempYes" name="waterTemp" value="yes"> Yes
+            <input type="radio" id="waterTempNo" name="waterTemp" value="no"> No
+
+            <button type="button" onclick="calculateFootprint()">Calculate Footprint</button>
+        </form>
+
+        <div id="result" style="display:none;"></div>
+    </div>
+
+    <div id="resources" class="tab-content">
+        <h2>Resources for Reducing Your Ecological Footprint</h2>
+        <p>Here are some tips and resources to help you reduce your environmental impact:</p>
+        <!-- Add resource links or tips here -->
+    </div>
+
+    <div id="info" class="tab-content">
+        <h2>Global Carbon Emissions and Impact</h2>
+        <p>Learn more about global carbon emissions and how individuals can make a difference in the fight against climate change.</p>
+        <!-- Add global/national data or impact info here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
