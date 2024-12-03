@@ -104,16 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Any other page-specific event listeners can be added here
 });
-function openTab(evt, tabName) {
-    // Hide all tab content
+function openTab(event, tabName) {
+    // Hide all tab contents
     const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(content => content.classList.remove('active'));
+    tabContents.forEach(tabContent => {
+        tabContent.classList.remove('active');
+    });
 
-    // Remove "active" class from all tabs
+    // Remove active class from all tab links
     const tabLinks = document.querySelectorAll('.nav-tabs a');
-    tabLinks.forEach(link => link.classList.remove('active-tab'));
+    tabLinks.forEach(tabLink => {
+        tabLink.classList.remove('active-tab');
+    });
 
-    // Show the clicked tab content and add "active" class to the clicked tab
+    // Show the clicked tab content and add active class to the clicked tab
     document.getElementById(tabName).classList.add('active');
-    evt.currentTarget.classList.add('active-tab');
+    event.currentTarget.classList.add('active-tab');
 }
