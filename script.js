@@ -1,6 +1,7 @@
 // script.js
 let currentQuestionIndex = 0;
 const questions = document.querySelectorAll('.question');
+const nextButton = document.querySelector('#nextButton');
 
 function nextQuestion() {
     // Store the current question's answer
@@ -101,9 +102,14 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'eco_calculator.html'; // Redirect to the eco_calculator page
         });
     }
-    
-    // Any other page-specific event listeners can be added here
+
+    // Add event listener to "Next" button to show next question
+    if (nextButton) {
+        nextButton.addEventListener('click', nextQuestion);
+    }
 });
+
+// Tab functionality
 function openTab(event, tabName) {
     // Hide all tab contents
     const tabContents = document.querySelectorAll('.tab-content');
