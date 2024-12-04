@@ -109,11 +109,13 @@
             </div>
 
             <!-- Water Temp -->
-             <div class="question">
+            <div class="question">
                 <label>Do you mostly use warm water?</label>
-                <input type="radio" id="warmYes" name="waterTemp" value="yes"> Yes
-                <input type="radio" id="warmNo" name="waterTemp" value="no"> No
-                <button type="button" onclick="nextQuestion()">Next</button>
+                <select id="waterTemp">
+                    <option value="">Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
             </div>
 
             <div id="result"></div>
