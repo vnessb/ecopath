@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Averages and Corporate Impact</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Include navigation -->
@@ -52,6 +54,11 @@
             
             <h3>What You Can Do</h3>
             <p>Advocate for corporate responsibility, support climate policies, and adopt sustainable practices in your own life to make a meaningful impact.</p>
+
+            <!-- Animated Pie Chart -->
+            <h3>Global Emissions Breakdown</h3>
+            <p>Here is the breakdown of global emissions by sector:</p>
+            <canvas id="emissionsChart" width="400" height="400"></canvas>
         </div>
     </main>
 
@@ -59,6 +66,7 @@
         <p>&copy; 2024 Ecological Web App</p>
     </footer>
 
+    <!-- Add the JavaScript for the pie chart -->
     <script src="script.js"></script>
 </body>
 </html>
