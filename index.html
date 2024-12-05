@@ -198,6 +198,60 @@
 
     </div>
 
+    <!-- External script file -->
     <script src="script.js"></script>
+
+    <!-- Pie chart script -->
+    <script>
+        // Pie chart data
+        const data = {
+            labels: ['Energy', 'Transportation', 'Industry', 'Agriculture', 'Waste'],
+            datasets: [{
+                label: 'Global Emissions Breakdown',
+                data: [40, 25, 20, 10, 5], // Emission data as percentage values
+                backgroundColor: [
+                    '#FF5733', // Energy
+                    '#33FF57', // Transportation
+                    '#3357FF', // Industry
+                    '#FF33A1', // Agriculture
+                    '#FFAB33'  // Waste
+                ],
+                borderColor: '#fff',
+                borderWidth: 1
+            }]
+        };
+
+        // Chart options
+        const options = {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                        }
+                    }
+                }
+            },
+            animation: {
+                animateScale: true, // Animation effect
+                animateRotate: true // Animation effect
+            }
+        };
+
+        // Create and animate the pie chart
+        window.onload = function() {
+            const ctx = document.getElementById('emissionsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: options
+            });
+        };
+    </script>
+
 </body>
 </html>
