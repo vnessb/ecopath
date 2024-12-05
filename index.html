@@ -168,11 +168,18 @@
             <li><a href="https://www.epa.gov/sites/default/files/2021-04/documents/us-ghg-inventory-2021-chapter-7-waste.pdf">U.S. Greenhouse Gas Inventory - Waste sector</a></li>
         </ul>
     </div>
-<div id="info" class="tab-content">
-    <h2>Environmental Facts and Tips</h2>
-    <p>Here are some important facts and statistics that shed light on environmental impact:</p>
+    <div id="info" class="tab-content">
+        <h2>Environmental Facts and Tips</h2>
+        <p>Here are some important facts and statistics that shed light on environmental impact:</p>
 
-    </div>
+    <!-- Fun Fact Button -->
+        <button id="fun-fact-btn">Show Fun Fact</button>
+
+    <!-- Fun Fact Pop-up -->
+        <div id="fun-fact-popup" class="popup" style="display:none;">
+            <p id="fun-fact-text"></p>
+            <button id="close-popup">Close</button>
+        </div>
 
     <h3>Food System</h3>
     <p>The food system is responsible for more than <strong>⅓ of global greenhouse emissions</strong>, with a majority coming from animal-based foods. Industrial agriculture contributes to large land use and deforestation. Consider adopting a plant-based diet, which requires fewer natural resources and is better for individual health.</p>
@@ -195,14 +202,6 @@
     </div>
 
 </div>
-
-    <!-- Fun Fact Button -->
-    <button id="fun-fact-btn" style="margin-right: 20px;">Show Fun Fact</button>
-
-    <!-- Fun Fact Pop-up -->
-    <div id="fun-fact-popup" class="popup" style="display:none;">
-        <p id="fun-fact-text"></p>
-        <button id="close-popup">Close</button>
         
 <!-- External script file -->
 <script src="script.js"></script>
