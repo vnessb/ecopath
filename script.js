@@ -127,3 +127,23 @@ function openTab(event, tabName) {
     document.getElementById(tabName).classList.add('active');
     event.currentTarget.classList.add('active-tab');
 }
+// Array of fun facts
+const funFacts = [
+    "Did you know? Recycling one aluminum can saves enough energy to run a TV for 3 hours!",
+    "Switching to a plant-based diet can reduce your carbon footprint by up to 50%.",
+    "The transportation sector is responsible for about 25% of global CO2 emissions.",
+    "Reducing food waste is one of the most effective ways to combat climate change.",
+    "One tree can absorb about 48 pounds of carbon dioxide per year."
+];
+
+// Show a random fun fact
+document.getElementById('fun-fact-btn').addEventListener('click', function() {
+    const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+    document.getElementById('fun-fact-text').textContent = randomFact;
+    document.getElementById('fun-fact-popup').style.display = 'block';
+});
+
+// Close the pop-up
+document.getElementById('close-popup').addEventListener('click', function() {
+    document.getElementById('fun-fact-popup').style.display = 'none';
+});
