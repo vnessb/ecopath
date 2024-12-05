@@ -231,3 +231,17 @@ input[type="radio"] {
 #close-popup:hover {
     background-color: #cc0000;
 }
+/* Pie chart container */
+#emissionsChart {
+    width: 150px;  /* Make the pie chart smaller */
+    height: 150px; /* Maintain aspect ratio */
+    margin-left: 20px;  /* Space between the button and the pie chart */
+    display: inline-block;  /* Keeps it on the same line as the button */
+}
+
+/* Fun Fact button positioning */
+#fun-fact-btn {
+    display: inline-block; /* Keep button inline with the pie chart */
+    vertical-align: middle; /* Align button vertically with the chart */
+    margin-right: 20px; /* Add some space between button and chart */
+}
